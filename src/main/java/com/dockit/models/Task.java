@@ -1,5 +1,7 @@
 package com.dockit.models;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +21,17 @@ public class Task {
     private String text;
     @Column
     private boolean is_checked;
+    @Column
+    private Date date;
+
+
+    public Date getDate(){
+        return this.date;
+    }
+
+    public void setDate(Date date){
+        this.date = date;
+    }
 
 
     public int getId() {
@@ -27,6 +40,14 @@ public class Task {
 
     public void setId(int id) {
         this.task_id = id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getText() {
